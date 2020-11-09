@@ -1,10 +1,10 @@
-#!/usr/bin/python3.8
+#!/usr/bin/python3.7
 import os,sys,time,json,threading
 #dla trybow 0,1,2
-brut='bruttt.c';brutc='B';bout='bout'#nazwa pliku bruta.cpp, nazwa do kompilacji,plik wyjsciowy
-wzor='wz.c';wzorc='W';wout='wout'#nazwa pliku bruta.cpp, nazwa do kompilacji,plik wyjsciowy
+brut='brutw.cpp';brutc='B';bout='bout'#nazwa pliku bruta.cpp, nazwa do kompilacji,plik wyjsciowy
+wzor='wzor.cpp';wzorc='W';wout='wout'#nazwa pliku bruta.cpp, nazwa do kompilacji,plik wyjsciowy
 tester='gen.cpp';testerc='T';test='tes'#nazwa pliku generatorki testow.cpp, nazwa do kompilacji,plik wyjsciowy
-wypisywanie=1# czy wynik testu ma być wypisany przy różnicy na końcu wyjścia
+wypisywanie=0# czy wynik testu ma być wypisany przy różnicy na końcu wyjścia
 rating=0 #1=on 0=off   wypisywanie stasunku wa do ac. zlicza ilosc wa i ac nie przerywajac sparwdzania dal != 0 
 type_rate=1 # 0=ilość wypisana wa i ac          1=procenowo ac/ilosc testow
 zliczanie_czasu=3	#1=wzorcowka   2=brut   3=2+1
@@ -500,9 +500,9 @@ genSC="""#define ll long long
 #include <bits/stdc++.h>
 #include <sys/time.h>
 using namespace std;
-ll rn(ll a=0,ll b=1){return ((ll)rand())%(b-a+1)+a;}
+unsigned ll llrand(){unsigned ll a = rand()*rand(); if (a<0) a*-1; return a;}
+ll rn(ll a=0,ll b=1){return ((unsigned ll)(llrand()))%(b-a+1)+a;}
 int main(){struct timeval tp;gettimeofday(&tp, NULL);long int ms = tp.tv_sec * 1000 + tp.tv_usec / 1000;srand(ms);
-
 
 
 }"""
