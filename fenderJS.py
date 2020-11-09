@@ -1,4 +1,4 @@
-#!/usr/bin/python3.7
+#!/usr/bin/python3.8
 import os,sys,time,json,threading
 #dla trybow 0,1,2
 brut='bruttt.c';brutc='B';bout='bout'#nazwa pliku bruta.cpp, nazwa do kompilacji,plik wyjsciowy
